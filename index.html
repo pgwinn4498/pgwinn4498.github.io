@@ -1,119 +1,237 @@
 <!DOCTYPE html>
+
 <head>
+
 <script src="jquery-3.2.1.min.js"></script>
+
 <link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+
 <style>
+
 body {
+
   font-family: helvetica, sans-serif;
+
   margin: 0 auto;
+
   max-width: 800px;
+
   background: blue;
+
 }
+
 div {
-  height: 200px;
+
+  height: 500px;
+
   background-size: cover;
+
   position: relative;
+
   margin: 40px 0 0 0;
+
   border-radius: 12px;
+
 }
+
 h1 {
+
   font-family: 'Londrina Shadow', cursive;
+
   text-align: center;
+
   font-size: 75px;
+
   color: yellow;
+
   margin: 60px 0 0 0;
+
 }
+
 h2 {
+
   text-align: center;
+
   color: orange;
+
   margin: 0px 0 70px 0;
+
 }
+
 p {
+
   color: rgba(255,255,255,1);
+
   background: green;
+
   background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+
   background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+
   background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+
   padding: 10px;
+
   line-height: 28px;
+
   text-align: justify;
+
   position: absolute;
+
   bottom: 0;
+
   margin: 0;
+
   height: 30px;
+
   transition: height .5s;
+
   -webkit-transition: height .5s;
+
   -moz-transition: height .5s;
+
 }
+
+
 
 small {
+
   opacity: 0;
+
 }
+
+
 
 .show-description p {
+
   height: 150px;
+
 }
+
+
 
 .show-description small {
+
   opacity: 1;
+
 }
 
+
+
 .first{
+
   background-image: url("https://thegreendragonfly.files.wordpress.com/2012/07/violets-3.jpg");
+
 }
+
 .second{
+
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b7/White-tailed_deer.jpg");
+
 }
+
 .dessert{
+
   background-image: url("https://dongasaway.files.wordpress.com/2014/03/scan_pic0031.jpg");
+
 }
+
 @media (max-width: 500px) {
+
   h1 {
+
     font-size: 50px;
+
     margin-top: 20px;
+
     line-height: 40px;
+
   }
+
   h2 {
+
     font-size: 20px;
+
     margin: 20px 0 30px 0;
+
   }
+
   div {
+
     margin: 20px 12px 0 12px;
+
   }
+
   p {
+
     font-size: 20px;
+
     line-height: 24px;
+
   }
+
   small {
+
     font-size: 16px;
+
   }
+
 }
+
+
 
 </style>
 
+
+
 </head>
 
+
+
 <body>
+
 <h1>Nature Trails</h1>
+
 <div class="first">
+
   <p>Illinois State Flower <span class="price"></span><br />
+
   <small>Illinois and Wisconsin both recognize violets as their state flower. The most common species of the flower found in Illinois is the dooryard violet, which can grow in almost any environment. Dooryard violets actually bloom twice a year, and typically have blossoms that are more purple than blue. Illinois schoolchildren voted to make the violet the Illinois state flower in 1907. </small></p>
+
 </div>
+
+
 
 <div class="second">
+
   <p>White-tailed deer<span class="price"></span><br />
+
   <small>The white-tailed deer is an animal of incredible beauty and power; they can run up to 40 miles per hour, jump 9-foot fences, and swim 13 miles per hour! The white underside of the deer's tail waves when it runs, and is flashed as a warning when danger is sensed. White-tailed deer also stamps it's hooves to alert other deer of a possible threat. Fawns are born with white spots for camouflage. Both native Americans and settlers relied on the white-tailed deer for buckskin and food.</small></p>
-</div>
-  
-<div class="dessert">
-  <p>Blue Gill<span class="price"></span><br />
-  <small>The bluegill is a smallish fish, growing to an average of 9 inches and weighing about 12 ounces. The largest bluegill ever caught in Illinois weighed 3 pounds, 8 ounces and was captured in a private pond by angler Darren May on May 10, 1987.</small></p>
+
 </div>
 
+  
+
+<div class="dessert">
+
+  <p>Blue Gill<span class="price"></span><br />
+
+  <small>The bluegill is a smallish fish, growing to an average of 9 inches and weighing about 12 ounces. The largest bluegill ever caught in Illinois weighed 3 pounds, 8 ounces and was captured in a private pond by angler Darren May on May 10, 1987.</small></p>
+
+</div>
+
+
+
 <script>
+
   $('div').on('click', function() {
+
       $(this).toggleClass('show-description');
+
   });
+
 </script>
+
+
 
 </body>
